@@ -1,7 +1,9 @@
+// 핀 번호 변수 선언
 #define RED_LED     5
 #define YELLOW_LED  18
 #define GREEN_LED   19
 
+// 설정
 void setup() {
   Serial.begin(9600);
   pinMode(RED_LED, OUTPUT);
@@ -9,6 +11,7 @@ void setup() {
   pinMode(GREEN_LED, OUTPUT);
 }
 
+// 루프 구간
 void loop() {
   if (Serial.available() > 0) {
     char sData = Serial.read();
